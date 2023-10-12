@@ -1,0 +1,52 @@
+{
+    "outbound": [
+        {
+            "port": 137,
+            "protocol": "UDP",
+            "justification": "Requires Windows host to support Volume Group backup using SMB. It allows access to Samba share during backup, export, and live mounts. However, these are necessary for Samba only for NetBIOS over TCP"
+        },
+        {
+            "port": 138,
+            "protocol": "UDP",
+            "justification": "Requires Windows host to support Volume Group backup using SMB. It allows access to Samba share during backup, export, and live mounts. However, these are necessary for Samba only for NetBIOS over TCP"
+        },
+        {
+            "port": 139,
+            "protocol": "TCP",
+            "justification": "Requires Windows host to support Volume Group backup using SMB. It allows access to Samba share during backup, export, and live mounts. However, these are necessary for Samba only for NetBIOS over TCP"
+        },
+        {
+            "port": 445,
+            "protocol": "TCP",
+            "justification": "Requires Windows host to support Volume Group backup using SMB."
+        },
+        {
+            "port": 5170,
+            "protocol": "TCP",
+            "justification": "Enables TLS communication between the Windows host and the Rubrik cluster to handle audit logs for RSC."
+        },
+        {
+            "port": 5170,
+            "protocol": "TCP",
+            "justification": "Enables TLS communication between the Windows host and the Rubrik cluster to handle audit logs for RSC."
+        },
+        {
+            "port": 22,
+            "protocol": "TCP",
+            "justification": "Ssh to windows."
+        }
+    ],
+    "inbound": [
+        {
+            "port": 12800,
+            "protocol": "TCP",
+            "justification": "Enables contact with the Rubrik Backup Service software on the Windows Server hosts, Enables contact with the Rubrik Backup Service software on the Hyper-V host."
+        },
+        {
+            "port": 12801,
+            "protocol": "TCP",
+            "justification": "Enables contact with the Rubrik Backup Service software on the Windows Server hosts, Enables contact with the Rubrik Backup Service software on the Hyper-V host."
+        }
+    ]
+
+}
